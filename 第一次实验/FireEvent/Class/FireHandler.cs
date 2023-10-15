@@ -11,12 +11,14 @@ namespace FireEvent.Class
     {
         public void HandleFire1(object sender, FireEventArgs e)
         {
-            MessageBox.Show($"Handler 1 received fire event: {e.Message}");
+            string displayMessage = $"Message = {e.Message}, Level = {e.Level}, Location = {e.Location}";
+            MessageBox.Show($"Handler 1 received fire event: {displayMessage}");
         }
 
         public void HandleFire2(object sender, FireEventArgs e)
         {
-            MessageBox.Show($"Handler 2 received fire event: {e.Message}");
+            string displayMessage = $"Message = {e.Message}, Level = {e.Level}, Location = {e.Location}";
+            MessageBox.Show($"Handler 2 received fire event: {displayMessage}");
         }
     }
 }

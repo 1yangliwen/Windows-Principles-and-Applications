@@ -35,12 +35,19 @@
             this.unbindBtn1 = new System.Windows.Forms.Button();
             this.bindBtn2 = new System.Windows.Forms.Button();
             this.bindBtn1 = new System.Windows.Forms.Button();
+            this.levelLbl = new System.Windows.Forms.Label();
+            this.locationLbl = new System.Windows.Forms.Label();
+            this.levelTxt = new System.Windows.Forms.TextBox();
+            this.locationTxt = new System.Windows.Forms.TextBox();
+            this.panel2 = new System.Windows.Forms.Panel();
             this.panel1.SuspendLayout();
+            this.panel2.SuspendLayout();
             this.SuspendLayout();
             // 
             // panel1
             // 
             this.panel1.BackColor = System.Drawing.SystemColors.Info;
+            this.panel1.Controls.Add(this.panel2);
             this.panel1.Controls.Add(this.EventHistoryListBox);
             this.panel1.Controls.Add(this.triggerBtn);
             this.panel1.Controls.Add(this.unbindBtn2);
@@ -57,9 +64,9 @@
             // 
             this.EventHistoryListBox.FormattingEnabled = true;
             this.EventHistoryListBox.ItemHeight = 24;
-            this.EventHistoryListBox.Location = new System.Drawing.Point(474, 117);
+            this.EventHistoryListBox.Location = new System.Drawing.Point(425, 333);
             this.EventHistoryListBox.Name = "EventHistoryListBox";
-            this.EventHistoryListBox.Size = new System.Drawing.Size(446, 484);
+            this.EventHistoryListBox.Size = new System.Drawing.Size(573, 268);
             this.EventHistoryListBox.TabIndex = 5;
             // 
             // triggerBtn
@@ -117,6 +124,53 @@
             this.bindBtn1.UseVisualStyleBackColor = false;
             this.bindBtn1.Click += new System.EventHandler(this.bindBtn1_Click);
             // 
+            // levelLbl
+            // 
+            this.levelLbl.AutoSize = true;
+            this.levelLbl.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.levelLbl.Location = new System.Drawing.Point(36, 40);
+            this.levelLbl.Name = "levelLbl";
+            this.levelLbl.Size = new System.Drawing.Size(88, 30);
+            this.levelLbl.TabIndex = 6;
+            this.levelLbl.Text = "Level";
+            // 
+            // locationLbl
+            // 
+            this.locationLbl.AutoSize = true;
+            this.locationLbl.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.locationLbl.Location = new System.Drawing.Point(40, 144);
+            this.locationLbl.Name = "locationLbl";
+            this.locationLbl.Size = new System.Drawing.Size(133, 30);
+            this.locationLbl.TabIndex = 7;
+            this.locationLbl.Text = "Location";
+            // 
+            // levelTxt
+            // 
+            this.levelTxt.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.levelTxt.Location = new System.Drawing.Point(222, 40);
+            this.levelTxt.Name = "levelTxt";
+            this.levelTxt.Size = new System.Drawing.Size(213, 41);
+            this.levelTxt.TabIndex = 8;
+            // 
+            // locationTxt
+            // 
+            this.locationTxt.Font = new System.Drawing.Font("宋体", 11F, System.Drawing.FontStyle.Regular, System.Drawing.GraphicsUnit.Point, ((byte)(134)));
+            this.locationTxt.Location = new System.Drawing.Point(222, 144);
+            this.locationTxt.Name = "locationTxt";
+            this.locationTxt.Size = new System.Drawing.Size(213, 41);
+            this.locationTxt.TabIndex = 9;
+            // 
+            // panel2
+            // 
+            this.panel2.Controls.Add(this.locationTxt);
+            this.panel2.Controls.Add(this.levelTxt);
+            this.panel2.Controls.Add(this.locationLbl);
+            this.panel2.Controls.Add(this.levelLbl);
+            this.panel2.Location = new System.Drawing.Point(470, 68);
+            this.panel2.Name = "panel2";
+            this.panel2.Size = new System.Drawing.Size(481, 221);
+            this.panel2.TabIndex = 10;
+            // 
             // Form1
             // 
             this.AutoScaleDimensions = new System.Drawing.SizeF(12F, 24F);
@@ -126,6 +180,8 @@
             this.Name = "Form1";
             this.Text = "Form1";
             this.panel1.ResumeLayout(false);
+            this.panel2.ResumeLayout(false);
+            this.panel2.PerformLayout();
             this.ResumeLayout(false);
 
         }
@@ -139,6 +195,11 @@
         private System.Windows.Forms.Button bindBtn2;
         private System.Windows.Forms.Button bindBtn1;
         private System.Windows.Forms.ListBox EventHistoryListBox;
+        private System.Windows.Forms.Label locationLbl;
+        private System.Windows.Forms.TextBox locationTxt;
+        private System.Windows.Forms.TextBox levelTxt;
+        private System.Windows.Forms.Label levelLbl;
+        private System.Windows.Forms.Panel panel2;
     }
 }
 

@@ -48,13 +48,18 @@ namespace FireEvent
         }
 
         private void triggerBtn_Click(object sender, EventArgs e)
-        {   
-            fireAlarm.RaiseFireEvent("Fire in the kitchen!");
+        {
+            string message = "Fire in the kitchen!";
+            string level = levelTxt.Text;  // 这里你可以从一个UI控件读取
+            string location = locationTxt.Text;  // 这里你也可以从一个UI控件读取
+
+            fireAlarm.RaiseFireEvent(message, level, location);
         }
 
         public void HandleFireRecord(object sender, FireEventArgs e)
         {
-            EventHistoryListBox.Items.Add($"Handler received fire event: {e.Message}");
+            string displayMessage = $"Handler received fire event: Message = {e.Message}, Level = {e.Level}, Location = {e.Location}";
+            EventHistoryListBox.Items.Add($"Handler received fire event: {displayMessage}");
             // 或者使用DataGrid
             // EventHistoryDataGrid.Items.Add(new { Handler = "Handler 1", Message = e.Message });
         }
