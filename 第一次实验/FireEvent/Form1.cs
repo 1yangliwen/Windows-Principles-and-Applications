@@ -23,7 +23,6 @@ namespace FireEvent
 
         private void bindBtn1_Click(object sender, EventArgs e)
         {
-
             fireAlarm.FireEvent += fireHandler.HandleFire1;
             fireAlarm.FireEvent += HandleFireRecord;  // 绑定到当前类的HandleFire1
         }
@@ -37,14 +36,16 @@ namespace FireEvent
 
         private void unbindBtn1_Click(object sender, EventArgs e)
         {
-
             fireAlarm.FireEvent -= fireHandler.HandleFire1;
+            fireAlarm.FireEvent -= HandleFireRecord;
         }
+
 
         private void unbindBtn2_Click(object sender, EventArgs e)
         {
 
             fireAlarm.FireEvent -= fireHandler.HandleFire2;
+            fireAlarm.FireEvent -= HandleFireRecord;
         }
 
         private void triggerBtn_Click(object sender, EventArgs e)
