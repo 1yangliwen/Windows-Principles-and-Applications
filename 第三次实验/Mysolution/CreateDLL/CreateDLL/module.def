@@ -1,0 +1,5 @@
+LIBRARY "CreateDLL"
+EXPORTS
+    Factorial
+    Difference
+

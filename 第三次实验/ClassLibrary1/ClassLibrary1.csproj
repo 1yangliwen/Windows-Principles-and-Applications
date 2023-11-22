@@ -1,0 +1,18 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>net7.0</TargetFramework>
+    <ImplicitUsings>enable</ImplicitUsings>
+    <Nullable>enable</Nullable>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <Compile Remove="ClassLibrary2\**" />
+    <Compile Remove="WinFormsCom\**" />
+    <EmbeddedResource Remove="ClassLibrary2\**" />
+    <EmbeddedResource Remove="WinFormsCom\**" />
+    <None Remove="ClassLibrary2\**" />
+    <None Remove="WinFormsCom\**" />
+  </ItemGroup>
+
+</Project>
